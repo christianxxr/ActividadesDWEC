@@ -10,24 +10,70 @@
     <script>
         var maximo = 10
         var arrayNumeros = []
-        var total = 0, numeroDatos, resultado
+        var total = 0,
+            suma = 0
 
         for (var i = 0; i < maximo; i++) {
-            entrada = prompt("Ingrese un numero de 0 a 100")
-            let numero = parseFloat(entrada)
-            if (numero > 100 || numero < 0) {
+            numero = parseInt((Math.random() * (101 - 0) + 0));
+
+            /*let entrada = prompt("Ingrese un numero de 0 a 100")
+            numero = parseInt(entrada)
+            if (numero > 101 || numero < 0) {
                 alert("El numero debe estar entre 0 y 100")
             } else {
                 arrayNumeros.push(numero)
-                numeroDatos = arrayNumeros.length
-                for(k = 0; k < numeroDatos; k++){
-                    total += arrayNumeros[k];
-                }
-                resultado = total / numeroDatos
-            }
+            }*/
+
+            arrayNumeros.push(numero)
         }
+
+        function calcularMedia() {
+            for (let k in arrayNumeros) {
+                suma += arrayNumeros[k]
+            }
+
+            media = suma / arrayNumeros.length
+            console.log("La media del array es " + media)
+        }
+
+        function calcularMediana() {
+            let sorted = arrayNumeros.slice().sort()
+            let middle = Math.floor(sorted.length / 2)
+            if (sorted.length % 2 === 0) {
+                mediana = (sorted[middle - 1] + sorted[middle]) / 2
+            }
+            console.log("La mediana del array es " + mediana)
+        }
+
+        function calcularModa() {
+            var maxVecesRepetidas = 0,
+                moda = 0
+            for (let i in arrayNumeros) {
+                vecesRepetidas = 0
+                for (let j in arrayNumeros) {
+                    if (arrayNumeros[i] == arrayNumeros[j]) {
+                        vecesRepetidas++;
+                    }
+                    if (vecesRepetidas > maxVecesRepetidas) {
+                        moda = arrayNumeros[i]
+                        maxVecesRepetidas = vecesRepetidas
+                    }
+
+                }
+            }
+            if (maxVecesRepetidas == 1) {
+                console.log("No hay moda, no se repite ningun numero")
+            } else {
+                console.log("La moda es " + moda + " que se ha repetido " + maxVecesRepetidas + " veces")
+            }
+
+        }
+
         console.log(arrayNumeros)
-        console.log("La media del array es " + resultado)
+
+        calcularMedia()
+        calcularMediana()
+        calcularModa()
     </script>
 </body>
 
