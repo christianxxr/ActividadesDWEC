@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <script>
+        var maximo = 10
+        var arrayNumeros = []
+        var total = 0, numeroDatos, resultado
+
+        for (var i = 0; i < maximo; i++) {
+            entrada = prompt("Ingrese un numero de 0 a 100")
+            let numero = parseFloat(entrada)
+            if (numero > 100 || numero < 0) {
+                alert("El numero debe estar entre 0 y 100")
+            } else {
+                arrayNumeros.push(numero)
+                numeroDatos = arrayNumeros.length
+                for(k = 0; k < numeroDatos; k++){
+                    total += arrayNumeros[k];
+                }
+                resultado = total / numeroDatos
+            }
+        }
+        console.log(arrayNumeros)
+        console.log("La media del array es " + resultado)
+    </script>
+</body>
+
+</html>
