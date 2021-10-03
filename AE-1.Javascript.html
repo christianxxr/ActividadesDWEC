@@ -10,7 +10,7 @@
     <script>
         var maximo = 10
         var arrayNumeros = []
-        var total = 0, numeroDatos, resultado
+        var total = 0, media, resultado
 
         for (var i = 0; i < maximo; i++) {
             entrada = prompt("Ingrese un numero de 0 a 100")
@@ -19,11 +19,7 @@
                 alert("El numero debe estar entre 0 y 100")
             } else {
                 arrayNumeros.push(numero)
-                numeroDatos = arrayNumeros.length
-                for(k = 0; k < numeroDatos; k++){
-                    total += arrayNumeros[k];
-                }
-                resultado = total / numeroDatos
+                media = arrayNumeros.reduce
             }
         }
         console.log(arrayNumeros)
