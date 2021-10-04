@@ -14,17 +14,17 @@
             suma = 0
 
         for (var i = 0; i < maximo; i++) {
-            numero = parseInt((Math.random() * (101 - 0) + 0));
+            //numero = parseInt((Math.random() * (101 - 0) + 0));
 
-            /*let entrada = prompt("Ingrese un numero de 0 a 100")
+            let entrada = prompt("Ingrese un numero de 0 a 100")
             numero = parseInt(entrada)
             if (numero > 101 || numero < 0) {
                 alert("El numero debe estar entre 0 y 100")
             } else {
                 arrayNumeros.push(numero)
-            }*/
+            }
 
-            arrayNumeros.push(numero)
+            //arrayNumeros.push(numero)
         }
 
         function calcularMedia() {
@@ -36,13 +36,13 @@
             console.log("La media del array es " + media)
         }
 
-        function calcularMediana() {
-            let sorted = arrayNumeros.slice().sort()
-            let middle = Math.floor(sorted.length / 2)
-            if (sorted.length % 2 === 0) {
-                mediana = (sorted[middle - 1] + sorted[middle]) / 2
-            }
-            console.log("La mediana del array es " + mediana)
+        function calcularMediana(numeros) {
+            numeros = numeros.sort((x, y) => x - y)
+            let mitad = Math.floor(numeros.length / 2)
+
+            return numeros.length % 2 == 1 ? numeros[mitad] : (numeros[mitad - 1] +
+                numeros[mitad]) / 2
+
         }
 
         function calcularModa() {
@@ -72,7 +72,7 @@
         console.log(arrayNumeros)
 
         calcularMedia()
-        calcularMediana()
+        console.log("La mediana del array es " + calcularMediana(arrayNumeros))
         calcularModa()
     </script>
 </body>
