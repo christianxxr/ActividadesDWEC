@@ -11,9 +11,12 @@
         function generarFormulario() {
             div1.innerHTML = "<h2 align='center'>Formulario genereado mediante DOM</h2>"
 
-            let form = document.createElement('form')
-            form.name = 'formularioDOM'
-            div1.appendChild(form)
+            let formulario = document.createElement('form')
+            formulario.name = 'formularioDOM'
+            formulario.id = 'formularioDOM'
+            formulario.action="urlServidor"
+            formulario.method='get'
+            div1.appendChild(formulario)
 
             generarInputText()
             generarRadioButton()
