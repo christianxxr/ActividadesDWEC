@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario DOM</title>
+
+    <script type="application/javascript">
+        function generarFormulario() {
+            div1.innerHTML = "<h2 align='center'>Formulario genereado mediante DOM</h2>"
+
+            let form = document.createElement('form')
+            form.name = 'formularioDOM'
+            div1.appendChild(form)
+
+            generarInputText()
+            generarRadioButton()
+            generarCheckbox()
+            generarImagenes()
+            generarSelect()
+            generarTextArea()
+        }
+
+        function generarInputText() {
+            let dni = document.createElement('p')
+            let textoDNI = document.createTextNode('DNI: ')
+            div1.appendChild(textoDNI)
+            let inputDNI = document.createElement("input")
+            inputDNI.type = "text"
+            inputDNI.id = "dni"
+            inputDNI.value = ""
+            div1.appendChild(inputDNI)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+            let nombre = document.createElement('p')
+            let textoNombre = document.createTextNode(' Nombre: ')
+            div1.appendChild(textoNombre)
+            let inputNombre = document.createElement("input") //input
+            inputNombre.type = "text"
+            inputNombre.id = "nombre"
+            inputNombre.value = ""
+            div1.appendChild(inputNombre)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+            let apellidos = document.createElement('p')
+            let textoApellidos = document.createTextNode(' Apellidos: ')
+            div1.appendChild(textoApellidos)
+            let inputApellidos = document.createElement('input')
+            inputApellidos.type = 'text'
+            inputApellidos.id = 'apellidos'
+            inputApellidos.value = ''
+            div1.appendChild(inputApellidos)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+            let direccion = document.createElement('p')
+            let textoDireccion = document.createTextNode(' Direccion: ')
+            div1.appendChild(textoDireccion)
+            let inputDireccion = document.createElement('input')
+            inputDireccion.type = 'text'
+            inputDireccion.id = 'direccion'
+            inputDireccion.value = ''
+            div1.appendChild(inputDireccion)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+            let telefono = document.createElement('p')
+            let textoTelefono = document.createTextNode(' Telefono: ')
+            div1.appendChild(textoTelefono)
+            let inputTelefono = document.createElement('input')
+            inputTelefono.type = 'text'
+            inputTelefono.id = 'telefono'
+            inputTelefono.value = ''
+            div1.appendChild(inputTelefono)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+        }
+
+        function generarRadioButton() {
+            v = new Array("Muy bueno", "Bueno", "Mal", "Muy mal")
+
+            for (radios in v) {
+                radio = document.createElement('input')
+                etiqueta = document.createElement('label')
+                texto = document.createTextNode(v[radios])
+                br = document.createElement('br')
+                radio.name = "notas"
+                radio.type = 'radio'
+                radio.value = v[radios]
+                etiqueta.appendChild(texto)
+                etiqueta.appendChild(radio)
+                div1.appendChild(etiqueta)
+                div1.appendChild(br)
+            }
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+            i = new Array("Azul", "Rojo", "Verde", "Amarillo")
+
+            for (radios in i) {
+                radio = document.createElement('input')
+                etiqueta = document.createElement('label')
+                texto = document.createTextNode(i[radios])
+                br = document.createElement('br')
+                radio.name = "colores"
+                radio.type = 'radio'
+                radio.value = i[radios]
+                etiqueta.appendChild(texto)
+                etiqueta.appendChild(radio)
+                div1.appendChild(etiqueta)
+                div1.appendChild(br)
+            }
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+        }
+
+        function generarCheckbox() {
+            let checkbox = document.createElement('input')
+            checkbox.type = 'checkbox'
+            checkbox.name = 'checkbox'
+            checkbox.value = '1'
+            checkbox.id = 'checkbox1'
+            let label = document.createElement('label')
+            label.htmlFor = 'checkbox1'
+            let textoLabel1 = document.createTextNode('Este es mi primer checkbox')
+            label.appendChild(textoLabel1)
+            div1.appendChild(checkbox)
+            div1.appendChild(label)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+            checkbox = document.createElement('input')
+            checkbox.type = 'checkbox'
+            checkbox.name = 'checkbox'
+            checkbox.value = '2'
+            checkbox.id = 'checkbox2'
+            label = document.createElement('label')
+            label.htmlFor = 'checkbox2'
+            let textoLabel2 = document.createTextNode('Este es mi segundo checkbox')
+            label.appendChild(textoLabel2)
+            div1.appendChild(checkbox)
+            div1.appendChild(label)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+            checkbox = document.createElement('input')
+            checkbox.type = 'checkbox'
+            checkbox.name = 'checkbox'
+            checkbox.value = '3'
+            checkbox.id = 'checkbox3'
+            label = document.createElement('label')
+            label.htmlFor = 'checkbox3'
+            let textoLabel3 = document.createTextNode('Este es mi tercer checkbox')
+            label.appendChild(textoLabel3)
+            div1.appendChild(checkbox)
+            div1.appendChild(label)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+            checkbox = document.createElement('input')
+            checkbox.type = 'checkbox'
+            checkbox.name = 'checkbox'
+            checkbox.value = '4'
+            checkbox.id = 'checkbox4'
+            label = document.createElement('label')
+            label.htmlFor = 'checkbox4'
+            let textoLabel4 = document.createTextNode('Este es mi cuarto checkbox')
+            label.appendChild(textoLabel4)
+            div1.appendChild(checkbox)
+            div1.appendChild(label)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+            checkbox = document.createElement('input')
+            checkbox.type = 'checkbox'
+            checkbox.name = 'checkbox'
+            checkbox.value = '5'
+            checkbox.id = 'checkbox5'
+            label = document.createElement('label')
+            label.htmlFor = 'checkbox5'
+            let textoLabel5 = document.createTextNode('Este es mi quinto checkbox')
+            label.appendChild(textoLabel5)
+            div1.appendChild(checkbox)
+            div1.appendChild(label)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+        }
+
+        function generarImagenes() {
+            let imagen1 = document.createElement('img')
+            imagen1.src = 'img/fotoDom.png'
+            imagen1.width = 300
+            imagen1.height = 300
+            div1.appendChild(imagen1)
+
+            let imagen2 = document.createElement('img')
+            imagen2.src = 'img/html-dom.jpg'
+            imagen2.width = 300
+            imagen2.height = 300
+            div1.appendChild(imagen2)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+        }
+
+        function generarSelect() {
+            let select = document.createElement('select')
+            select.name = "equipos"
+            select.id = "equipos"
+            let option1 = document.createElement('option')
+            let option2 = document.createElement('option')
+            let option3 = document.createElement('option')
+            let option4 = document.createElement('option')
+            let option5 = document.createElement('option')
+            let realMadrid = document.createTextNode("Real Madrid CF")
+            let valencia = document.createTextNode("Valencia FC")
+            let fcb = document.createTextNode("FC Barcelona")
+            let atletico = document.createTextNode("Atletico de Madrid FC")
+            let sevilla = document.createTextNode("Sevilla FC")
+            option1.appendChild(realMadrid)
+            option2.appendChild(valencia)
+            option3.appendChild(fcb)
+            option4.appendChild(atletico)
+            option5.appendChild(sevilla)
+            select.appendChild(option1)
+            select.appendChild(option2)
+            select.appendChild(option3)
+            select.appendChild(option4)
+            select.appendChild(option5)
+            div1.appendChild(select)
+
+            br = document.createElement('br')
+            div1.appendChild(br)
+            br = document.createElement('br')
+            div1.appendChild(br)
+
+        }
+
+        function generarTextArea() {
+            let textArea = document.createElement('textarea')
+            textArea.rows = 20
+            textArea.cols = 100
+            div1.appendChild(textArea)
+        }
+    </script>
+</head>
+
+<body onload="generarFormulario()">
+    <div id="div1"></div>
+</body>
+
+</html>
