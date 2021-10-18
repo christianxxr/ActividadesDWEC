@@ -11,11 +11,13 @@
         function generarFormulario() {
             div1.innerHTML = "<h2 align='center'>Formulario genereado mediante DOM</h2>"
 
+            //Creamos el formulario
+
             let formulario = document.createElement('form')
             formulario.name = 'formularioDOM'
             formulario.id = 'formularioDOM'
-            formulario.action="urlServidor"
-            formulario.method='get'
+            formulario.action = "urlServidor"
+            formulario.method = 'get'
             div1.appendChild(formulario)
 
             generarInputText()
@@ -27,70 +29,70 @@
         }
 
         function generarInputText() {
-            let dni = document.createElement('p')
+            let dni = document.createElement('p') //Creamos la etiqueta <p></p>
             let textoDNI = document.createTextNode('DNI: ')
-            div1.appendChild(textoDNI)
-            let inputDNI = document.createElement("input")
-            inputDNI.type = "text"
-            inputDNI.id = "dni"
-            inputDNI.value = ""
-            div1.appendChild(inputDNI)
+            div1.appendChild(textoDNI) //Añadimos a la etiqueta <p>DNI: </p>
+            let inputDNI = document.createElement("input") // Creamos la etiqueta <input></input>
+            inputDNI.type = "text" // Le damos a la etiqueta el tipo <input type="text"></input>
+            inputDNI.id = "dni" // Le da damos a la etiqueta el id <input type="text" id="dni"></input>
+            div1.appendChild(inputDNI) //Fin de la etiqueta <p>DNI: <input type="text" id="dni"></input></p>
 
-            br = document.createElement('br')
+            br = document.createElement('br') //Creamos la etiqueta <br/> para dar espacio
             div1.appendChild(br)
             br = document.createElement('br')
             div1.appendChild(br)
 
-            let nombre = document.createElement('p')
+            let nombre = document.createElement('p') //Creamos la etiqueta <p></p>
             let textoNombre = document.createTextNode(' Nombre: ')
-            div1.appendChild(textoNombre)
-            let inputNombre = document.createElement("input") //input
-            inputNombre.type = "text"
-            inputNombre.id = "nombre"
-            inputNombre.value = ""
-            div1.appendChild(inputNombre)
+            div1.appendChild(textoNombre) //Añadimos a la etiqueta <p>Nombre: </p>
+            let inputNombre = document.createElement("input") // Creamos la etiqueta <input></input>
+            inputNombre.type = "text" // Le damos a la etiqueta el tipo <input type="text"></input>
+            inputNombre.id = "nombre" // Le da damos a la etiqueta el id <input type="text" id="nombre"></input>
+            div1.appendChild(inputNombre) //Fin de la etiqueta <p>Nombre: <input type="text" id="nombre"></input></p>
 
             br = document.createElement('br')
             div1.appendChild(br)
             br = document.createElement('br')
             div1.appendChild(br)
 
-            let apellidos = document.createElement('p')
+            let apellidos = document.createElement('p') //Creamos la etiqueta <p></p>
             let textoApellidos = document.createTextNode(' Apellidos: ')
-            div1.appendChild(textoApellidos)
-            let inputApellidos = document.createElement('input')
-            inputApellidos.type = 'text'
-            inputApellidos.id = 'apellidos'
-            inputApellidos.value = ''
-            div1.appendChild(inputApellidos)
+            div1.appendChild(textoApellidos) //Añadimos a la etiqueta <p>Apellidos: </p>
+            let inputApellidos = document.createElement('input') // Creamos la etiqueta <input></input>
+            inputApellidos.type = 'text' // Le damos a la etiqueta el tipo <input type="text"></input>
+            inputApellidos.id =
+                'apellidos' // Le da damos a la etiqueta el id <input type="text" id="apellidos"></input>
+            div1.appendChild(
+                inputApellidos) //Fin de la etiqueta <p>Apellidos: <input type="text" id="apellidos"></input></p>
 
             br = document.createElement('br')
             div1.appendChild(br)
             br = document.createElement('br')
             div1.appendChild(br)
 
-            let direccion = document.createElement('p')
+            let direccion = document.createElement('p') //Creamos la etiqueta <p></p>
             let textoDireccion = document.createTextNode(' Direccion: ')
-            div1.appendChild(textoDireccion)
-            let inputDireccion = document.createElement('input')
-            inputDireccion.type = 'text'
-            inputDireccion.id = 'direccion'
-            inputDireccion.value = ''
-            div1.appendChild(inputDireccion)
+            div1.appendChild(textoDireccion) //Añadimos a la etiqueta <p>Direccion: </p>
+            let inputDireccion = document.createElement('input') // Creamos la etiqueta <input></input>
+            inputDireccion.type = 'text' // Le damos a la etiqueta el tipo <input type="text"></input>
+            inputDireccion.id =
+                'direccion' // Le da damos a la etiqueta el id <input type="text" id="direccion"></input>
+            div1.appendChild(
+                inputDireccion) //Fin de la etiqueta <p>Direccion: <input type="text" id="direccion"></input></p>
 
             br = document.createElement('br')
             div1.appendChild(br)
             br = document.createElement('br')
             div1.appendChild(br)
 
-            let telefono = document.createElement('p')
+            let telefono = document.createElement('p') //Creamos la etiqueta <p></p>
             let textoTelefono = document.createTextNode(' Telefono: ')
-            div1.appendChild(textoTelefono)
-            let inputTelefono = document.createElement('input')
-            inputTelefono.type = 'text'
-            inputTelefono.id = 'telefono'
-            inputTelefono.value = ''
-            div1.appendChild(inputTelefono)
+            div1.appendChild(textoTelefono) //Añadimos a la etiqueta <p>Telefono: </p>
+            let inputTelefono = document.createElement('input') // Creamos la etiqueta <input></input>
+            inputTelefono.type = 'text' // Le damos a la etiqueta el tipo <input type="text"></input>
+            inputTelefono.id = 'telefono' // Le da damos a la etiqueta el id <input type="text" id="telefono"></input>
+            div1.appendChild(
+                inputTelefono) //Fin de la etiqueta <p>Telefono: <input type="text" id="telefono"></input></p>
 
             br = document.createElement('br')
             div1.appendChild(br)
@@ -99,18 +101,21 @@
         }
 
         function generarRadioButton() {
-            v = new Array("Muy bueno", "Bueno", "Mal", "Muy mal")
+            v = new Array("Muy bueno", "Bueno", "Mal",
+                "Muy mal") // Insertamos en un array los valores que queremos mostrar
 
             for (radios in v) {
-                radio = document.createElement('input')
-                etiqueta = document.createElement('label')
+                radio = document.createElement('input') // Creamos la etiqueta <input></input>
+                etiqueta = document.createElement('label') // Creamos la etiqueta <label></label>
                 texto = document.createTextNode(v[radios])
-                br = document.createElement('br')
-                radio.name = "notas"
-                radio.type = 'radio'
-                radio.value = v[radios]
-                etiqueta.appendChild(texto)
-                etiqueta.appendChild(radio)
+                br = document.createElement('br') // Dejamos un espacio entre los radio button
+                radio.name = "notas" // Le asignamos un valor que sea común a los valores
+                radio.type = 'radio' // Le asignamos el tipo radio
+                radio.value = v[radios] // Metemos los valores del array
+                etiqueta.appendChild(texto) //<label="valorDelArray"></label>
+                etiqueta.appendChild(
+                    radio
+                ) //<label="valorDelArray"><input type="radio" name="radio" values="valoresDelArray"></input></label>
                 div1.appendChild(etiqueta)
                 div1.appendChild(br)
             }
@@ -144,17 +149,19 @@
         }
 
         function generarCheckbox() {
-            let checkbox = document.createElement('input')
-            checkbox.type = 'checkbox'
-            checkbox.name = 'checkbox'
-            checkbox.value = '1'
-            checkbox.id = 'checkbox1'
-            let label = document.createElement('label')
+            let checkbox = document.createElement('input') //<input></input>
+            checkbox.type = 'checkbox' //<input type="checkbox"></input>
+            checkbox.name = 'checkbox' //<input type="checkbox" name="checkbox"></input>
+            checkbox.value = '1' //<input type="checkbox" name="checkbox" value="1"></input>
+            checkbox.id = 'checkbox1' //<input type="checkbox" name="checkbox" value="1" id="checkbox1"></input>
+            let label = document.createElement('label') //<label></label>
             label.htmlFor = 'checkbox1'
             let textoLabel1 = document.createTextNode('Este es mi primer checkbox')
-            label.appendChild(textoLabel1)
+            label.appendChild(textoLabel1) //<label>Este es mi primer checkbox</label>
             div1.appendChild(checkbox)
-            div1.appendChild(label)
+            div1.appendChild(
+                label
+            ) //<label><input type="checkbox" name="checkbox" value="1" id="checkbox1"></input>>Este es mi primer checkbox</label>
 
             br = document.createElement('br')
             div1.appendChild(br)
@@ -227,7 +234,7 @@
             imagen1.src = 'img/fotoDom.png'
             imagen1.width = 300
             imagen1.height = 300
-            div1.appendChild(imagen1)
+            div1.appendChild(imagen1) //<img src="img/fotoDom.png" width=300 height=300>
 
             let imagen2 = document.createElement('img')
             imagen2.src = 'img/html-dom.jpg'
@@ -242,30 +249,39 @@
         }
 
         function generarSelect() {
-            let select = document.createElement('select')
-            select.name = "equipos"
-            select.id = "equipos"
-            let option1 = document.createElement('option')
-            let option2 = document.createElement('option')
-            let option3 = document.createElement('option')
-            let option4 = document.createElement('option')
-            let option5 = document.createElement('option')
+            let select = document.createElement('select') //<select></select>
+            select.name = "equipos" //<select name="equipos"></select>
+            select.id = "equipos" //<select name="equipos" id="equipos"></select>
+            let option1 = document.createElement('option') //<option></option>
+            let option2 = document.createElement('option') //<option></option>
+            let option3 = document.createElement('option') //<option></option>
+            let option4 = document.createElement('option') //<option></option>
+            let option5 = document.createElement('option') //<option></option>
             let realMadrid = document.createTextNode("Real Madrid CF")
             let valencia = document.createTextNode("Valencia FC")
             let fcb = document.createTextNode("FC Barcelona")
             let atletico = document.createTextNode("Atletico de Madrid FC")
             let sevilla = document.createTextNode("Sevilla FC")
-            option1.appendChild(realMadrid)
-            option2.appendChild(valencia)
-            option3.appendChild(fcb)
-            option4.appendChild(atletico)
-            option5.appendChild(sevilla)
+            option1.appendChild(realMadrid) //<option>Real Madrid CF</option>
+            option2.appendChild(valencia) //<option>Valencia FC</option>
+            option3.appendChild(fcb) //<option>FC Barcelona</option>
+            option4.appendChild(atletico) //<option>Atletico de Madrid FC</option>
+            option5.appendChild(sevilla) //<option>Sevilla FC</option>
             select.appendChild(option1)
             select.appendChild(option2)
             select.appendChild(option3)
             select.appendChild(option4)
             select.appendChild(option5)
             div1.appendChild(select)
+            /*
+                <select name="equipos" id="equipos">
+                    <option>Real Madrid CF</option>
+                    <option>Valencia FC</option>
+                    <option>FC Barcelona</option>
+                    <option>Atletico de Madrid FC</option>
+                    <option>Sevilla FC</option>
+                </select>
+             */
 
             br = document.createElement('br')
             div1.appendChild(br)
@@ -278,7 +294,7 @@
             let textArea = document.createElement('textarea')
             textArea.rows = 20
             textArea.cols = 100
-            div1.appendChild(textArea)
+            div1.appendChild(textArea) //<textarea rows="20" cols="100"></textarea>
         }
     </script>
 </head>
