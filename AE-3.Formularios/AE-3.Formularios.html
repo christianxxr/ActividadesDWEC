@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario Pizzería</title>
+    <script type="text/javascript" src="funciones.js"></script>
+</head>
+
+<body>
+    <form name="formularioPizzeria">
+        <h1 align="center">Pizzería</h1>
+        <table>
+            <tr>
+                <td>Nombre: </td>
+                <td><input type="text" id="nombre"></td>
+            </tr>
+            <tr>
+                <td>Dirección: </td>
+                <td><input type="text" id="direccion"></td>
+            </tr>
+            <tr>
+                <td>Teléfono: </td>
+                <td><input type="text" id="telefono"></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="text" id="email"></td>
+            </tr>
+            <tr>
+                <td>Tamaño de la pizza: </td>
+                <td><input type="radio" value="5€" name="tamanio" id="tamanioPequenio">Pequeña
+                    <input type="radio" value="10€" name="tamanio" id="tamanioMediana">Mediana
+                    <input type="radio" value="15€" name="tamanio" id="tamanioGrande">Grande
+                </td>
+            </tr>
+            <tr>
+                <td>Ingredientes: </td>
+                <td>
+                    <input type="checkbox" value="1€" name="ingredientes" id="champis">Champiñones
+                    <input type="checkbox" value="1€" name="ingredientes" id="bacon">Bacon
+                    <input type="checkbox" value="1€" name="ingredientes" id="cebolla">Cebolla
+                    <input type="checkbox" value="1€" name="ingredientes" id="pollo">Pollo
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Procesar pedido">
+    </form>
+</body>
+
+</html>
