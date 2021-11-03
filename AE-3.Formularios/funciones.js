@@ -48,7 +48,7 @@ function validacion() {
     var comprobarNombrePorMayuscula = /^[A-Z]/
     esValido = comprobarNombrePorMayuscula.test(nombre.value)
 
-    if (!esValido){
+    if (!esValido) {
         alert('[ERROR] El nombre debe empezar por mayúscula')
         return false;
     }
@@ -73,9 +73,17 @@ function validacion() {
 
     return true
 
+}
 
+function calcularGastos() {
+    var resultado = 0;
+    resultado = parseInt(document.getElementsByName(tamanio)) + parseInt(document.getElementsByName(ingredientes))
+    document.getElementById("resultadoCompra").innerHTML = ("Total: " + resultado + "€")
 }
 
 window.onload = function () {
     formularioPizzeria.onsubmit = validacion
+    btnProcesar.onclick = calcularGastos
 }
+
+//btnProcesar.onclick = calcularGastos
