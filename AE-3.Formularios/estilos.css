@@ -1,0 +1,248 @@
+* {
+    --primary-color: #5e35b1;
+    --primary-color-dark: #280680;
+    --primary-color-light: #9162e4;
+    --secondary-color: #ff6f00;
+    --secondary-color-dark: #c43e00;
+    --secondary-color-ligth: #ffa040;
+    --font-color: #000000;
+    --font-color-on-color: #ffffff;
+    --font-size-small: 14px;
+    --font-size-normal: 20px;
+    --font-size-big: 28px;
+    --font-size-huge: 36px;
+    --font-weight-not-important: 300;
+    --font-weight-normal: 400;
+    --font-weight-important: 700;
+    --border-radious: 4px;
+}
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.pizza-header {
+    width: 100%;
+    height: 120px;
+    background-color: #5e35b1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.header-section {
+    width: 100%;
+    margin: 0px 15px;
+}
+
+.header-section.logo {
+    width: 40%;
+}
+
+.header-section.title {
+    width: 60%;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.pizza-logo {
+    height: 120px;
+}
+
+.pizza-form {
+    padding: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: #5e35b1;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.text-field-set {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px 0px;
+}
+
+.text-label {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.text-field {
+    width: 95%;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+}
+
+.text-field:focus {
+    outline: none;
+    border: 3px solid #ff6f00;
+}
+
+.text-field.error {
+    border: 1px solid #c43e00;
+}
+
+.text-field.error:focus {
+    outline: none;
+    border: 3px solid #c43e00;
+}
+
+.text-error {
+    color: #c43e00;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.option-field-set {
+    margin: 10px 0px;
+}
+
+.field-set-title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.option-label {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.buttons-set {
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn {
+    margin: 0px 10px;
+    width: 175px;
+    height: 50px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background-color: #ff6f00;
+}
+
+.btn.secondary {
+    background-color: #ffa040;
+}
+
+.btn:focus {
+    outline: none;
+    border: solid 3px #c43e00;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn:disabled {
+    background-color: gray;
+    cursor: no-drop;
+}
+
+.btn:disabled:hover {
+    transform: scale(0.9);
+}
+
+.options-sets {
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.bill-set {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.bill-label {
+    font-size: 28px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.bill-details {
+    width: 100%;
+}
+
+.bill-line {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    font-size: 28px;
+    font-weight: 400;
+    border: solid 1px #ff6f00;
+    border-radius: 4px;
+    padding: 5px 0px;
+}
+
+.bill-line.total {
+    margin-top: 10px;
+    border: solid 3px #ff6f00;
+    font-weight: 700;
+}
+
+.modal {
+    opacity: 0;
+    display: none;
+    padding: 15px;
+    background-color: #ffffff;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 600px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px 2px #000000;
+}
+
+@keyframes open-modal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal.open {
+    opacity: 1;
+    display: block;
+    animation: open-modal 0.5s ease;
+}
