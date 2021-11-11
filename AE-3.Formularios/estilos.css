@@ -1,22 +1,3 @@
-* {
-    --primary-color: #5e35b1;
-    --primary-color-dark: #280680;
-    --primary-color-light: #9162e4;
-    --secondary-color: #ff6f00;
-    --secondary-color-dark: #c43e00;
-    --secondary-color-ligth: #ffa040;
-    --font-color: #000000;
-    --font-color-on-color: #ffffff;
-    --font-size-small: 14px;
-    --font-size-normal: 20px;
-    --font-size-big: 28px;
-    --font-size-huge: 36px;
-    --font-weight-not-important: 300;
-    --font-weight-normal: 400;
-    --font-weight-important: 700;
-    --border-radious: 4px;
-}
-
 
 body {
     padding: 0px;
