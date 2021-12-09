@@ -1,0 +1,10 @@
+{
+    "PIZZERIA":{
+        "PIZZA":[
+            {
+                "size":["small", "medium", "big"],
+                "ingredients":["Salami", "Mushrooms", "Anchovies", "Onion"]
+            }
+        ]
+    }
+}
